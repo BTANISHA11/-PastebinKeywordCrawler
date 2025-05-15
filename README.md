@@ -1,62 +1,70 @@
+# Pastebin Keyword Crawler
 
-Pastebin Keyword Crawler
-Overview
-Pastebin Keyword Crawler is a Python script that scrapes Pastebin's public archive for pastes containing crypto-related keywords or Telegram links. It extracts relevant information and saves it in a structured JSON Lines format. The application is built using Streamlit, allowing a user-friendly interface for initiating and viewing the crawling process.
+## Overview
 
-Features
-Scrapes the latest 30 pastes from Pastebin's archive.
-Searches for keywords related to cryptocurrencies and Telegram links.
-Outputs results in a JSON Lines file (keyword_matches.jsonl).
-Implements rate-limiting to avoid being blocked.
-Uses logging to record activities and keyword findings.
-Supports multi-threading for faster processing.
-Requirements
-Python 3.7 or higher
-requests library
-beautifulsoup4 library
-streamlit library
-Installation
-Clone the repository:
+**Pastebin Keyword Crawler** is a Python script that scrapes Pastebin's public archive for pastes containing crypto-related keywords or Telegram links. It extracts relevant information and saves it in a structured JSON Lines format. The application is built using Streamlit, allowing a user-friendly interface for initiating and viewing the crawling process.
 
-BASH
+## Features
 
-git clone https://github.com/BTANISHA11/-pastebin-keyword-crawler.git
-cd -pastebin-keyword-crawler
-Install required packages:
+- Scrapes the latest 30 pastes from Pastebin's archive.
+- Searches for keywords related to cryptocurrencies and Telegram links.
+- Outputs results in a JSON Lines file (`keyword_matches.jsonl`).
+- Implements rate-limiting to avoid being blocked.
+- Uses logging to record activities and keyword findings.
+- Supports multi-threading for faster processing.
 
-BASH
+## Requirements
 
-pip install -r requirements.txt
-Ensure your requirements.txt includes the following:
+- Python 3.7 or higher
+- `requests` library
+- `beautifulsoup4` library
+- `streamlit` library
 
+## Installation
 
-requests
-beautifulsoup4
-streamlit
+1. **Clone the repository**:
 
-Usage
-Run the application:
+    ```bash
+    git clone https://github.com/BTANISHA11/pastebin-keyword-crawler.git
+    cd pastebin-keyword-crawler
+    ```
+
+2. **Install required packages**:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+   Ensure your `requirements.txt` includes the following:
+## Usage
+
+1. **Run the application**:
 Use the Streamlit command to start the application.
 
-BASH
+ ```bash
+ streamlit run app.py
+ ```
 
-streamlit run streamlit_pastebin_crawler.py
-Access the interface:
+2. **Access the interface**:
+- Open a web browser and navigate to `http://localhost:8501`.
+- Click "Start Crawling" to begin fetching and analyzing pastes from Pastebin.
 
-Open a web browser and navigate to http://localhost:8501.
-Click "Start Crawling" to begin fetching and analyzing pastes from Pastebin.
-View results:
+3. **View results**:
+- Results will be displayed within the Streamlit app and saved to `keyword_matches.jsonl`.
 
-Results will be displayed within the Streamlit app and saved to keyword_matches.jsonl.
-Configuration
-Rate Limiting: Adjust the sleep interval between requests in the script for different rate-limiting needs.
-Proxies: If you have access to a pool of proxies, you can configure them within the script to enhance anonymity and circumvent rate limits.
-Logging
+## Configuration
+
+- **Rate Limiting**: Adjust the sleep interval between requests in the script for different rate-limiting needs.
+- **Proxies**: If you have access to a pool of proxies, you can configure them within the script to enhance anonymity and circumvent rate limits.
+
+## Logging
+
 Log files will record each paste accessed and any keywords found during the crawling process. This can help with debugging and tracking script activity.
 
-Contribution
+## Contribution
+
 Contributions are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
-License
-This project is licensed under the MIT License.
+## License
 
+This project is licensed under the MIT License.
